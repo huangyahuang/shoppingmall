@@ -7,12 +7,10 @@ import org.springframework.stereotype.Service
 
 interface IUserService {
 
-    fun queryAll(): List<UserEntity>
+    fun getAll(): List<UserEntity>
 
-    fun adduser(user : UserEntity): UserEntity
+    fun saveOrUpdateUser(user : UserEntity): UserEntity
 
-    fun updateUser(user : UserEntity): UserEntity
-
-    fun delectUser(id : Long)
+    fun delectByIdUser(id : Int)
 
 }

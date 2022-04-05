@@ -15,7 +15,7 @@ class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    var id : Long  = 0;
+    var id : Int  = 0;
 
     @Column(name = "account")
     var account : String  = ""

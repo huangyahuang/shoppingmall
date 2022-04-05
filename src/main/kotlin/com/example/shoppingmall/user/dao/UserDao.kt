@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Component
 
 @Component
-interface UserDao : JpaRepository<UserEntity, Long> {
+interface UserDao : JpaRepository<UserEntity, Int> {
 
     fun findByAccount(account : String):UserEntity;
 }

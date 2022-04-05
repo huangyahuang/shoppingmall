@@ -11,19 +11,15 @@ class IUserServiceImpl : IUserService {
     @Autowired
     lateinit var userDao:UserDao;
 
-    override fun queryAll(): List<UserEntity> {
+    override fun getAll(): List<UserEntity> {
         return userDao.findAll();
     }
 
-    override fun adduser(user: UserEntity): UserEntity {
+    override fun saveOrUpdateUser(user: UserEntity): UserEntity {
         return userDao.save(user);
     }
 
-    override fun updateUser(user: UserEntity): UserEntity {
-        TODO("Not yet implemented")
-    }
-
-    override fun delectUser(id: Long) {
+    override fun delectByIdUser(id: Int) {
         userDao.deleteById(id);
     }
 
