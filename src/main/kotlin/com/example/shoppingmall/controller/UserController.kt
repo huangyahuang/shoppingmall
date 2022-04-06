@@ -1,9 +1,8 @@
-package com.example.shoppingmall.user.controller
+package com.example.shoppingmall.controller
 
-import com.example.shoppingmall.user.entity.UserEntity
-import com.example.shoppingmall.user.service.IUserService
+import com.example.shoppingmall.entity.UserEntity
+import com.example.shoppingmall.service.IUserService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -20,7 +19,7 @@ class UserController {
     }
 
     @RequestMapping("addUser")
-    fun addOrUpdateUser(user : UserEntity): UserEntity{
+    fun addOrUpdateUser(user : UserEntity): UserEntity {
         return iUserService.saveOrUpdateUser(user);
     }
 

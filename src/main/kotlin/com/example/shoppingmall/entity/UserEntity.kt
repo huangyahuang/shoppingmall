@@ -1,4 +1,4 @@
-package com.example.shoppingmall.user.entity
+package com.example.shoppingmall.entity
 
 import lombok.Data
 import org.hibernate.annotations.Table
@@ -7,7 +7,9 @@ import javax.persistence.Column
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-
+/*
+* 用户管理
+* */
 @javax.persistence.Entity(name="mall_user")
 @Table(appliesTo = "mall_user")
 @Data

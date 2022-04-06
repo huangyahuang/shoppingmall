@@ -1,8 +1,6 @@
-package com.example.shoppingmall.user.service
+package com.example.shoppingmall.service
 
-import com.example.shoppingmall.user.entity.UserEntity
-import org.springframework.stereotype.Service
-
+import com.example.shoppingmall.entity.UserEntity
 
 
 interface IUserService {
