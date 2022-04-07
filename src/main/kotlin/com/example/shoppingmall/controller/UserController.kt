@@ -18,7 +18,7 @@ class UserController {
         return iUserService.getAll();
     }
 
-    @RequestMapping("addUser")
+    @RequestMapping("addOrUpdateUser")
     fun addOrUpdateUser(user : UserEntity): UserEntity {
         return iUserService.saveOrUpdateUser(user);
     }

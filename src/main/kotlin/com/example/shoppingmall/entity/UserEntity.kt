@@ -3,14 +3,12 @@ package com.example.shoppingmall.entity
 import lombok.Data
 import org.hibernate.annotations.Table
 import java.util.Date
-import javax.persistence.Column
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
+
 /*
 * 用户管理
 * */
-@javax.persistence.Entity(name="mall_user")
+@Entity(name="mall_user")
 @Table(appliesTo = "mall_user")
 @Data
 class UserEntity {
@@ -37,7 +35,7 @@ class UserEntity {
     @Column(name = "self_introduction")
     var selfIntroduction : String = ""
 
-    @Column(name = "register")
-    var register : Date? = null
+    @Column(name = "register_time")
+    var registerTime : Date? = null
 
 }
