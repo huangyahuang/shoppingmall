@@ -14,11 +14,14 @@ import javax.persistence.*
 class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id",nullable=false)
     var id : Int  = 0;
 
-    @Column(name = "account")
+    @Column(name = "account",nullable=false)
     var account : String  = ""
+
+    @Column(name = "password",nullable=false)
+    var password : String = ""
 
     @Column(name = "head_portrait")
     var headPortrait : String =""
@@ -37,5 +40,11 @@ class UserEntity {
 
     @Column(name = "register_time")
     var registerTime : Date? = null
+
+    /*
+    * 用户类型 1为注册用户 2为后台管理员
+    * */
+    @Column(name = "user_type")
+    var userType : Int = 1;
 
 }
